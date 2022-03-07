@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getTimeandDATE</title>
+</head>
+<style>
+    * {
+        color: rgb(65, 64, 64);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .firstdiv {
+        background-color: rgb(233, 229, 229);
+        padding: 20px;
+        width: 50vw;
+        position: relative;
+        /* border: solid 1px black; */
+        top: 50px;
+        border-radius: 10px;
+        line-height: 1.5;
+    }
+
+    .firstdiv p {
+        margin: 10px 0 10px 0;
+        /* font-weight: 100; */
+    }
+
+    .firstdiv .paragraph {
+        font-weight: 600;
+        padding: 10px 0 10px 0;
+    }
+
+    .firstdiv .btn {
+        text-decoration: none;
+        background-color: rgb(53, 103, 211);
+        color: white;
+        padding: 5px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div class="firstdiv">
+            <h1 id="time">Current Time Is:</h1>
+            <p>We have got you covered. This is a simple hero unit, a simple jumbotron style component for calling extra
+                attention to feature content or infomation</p>
+            <p class="paragraph">We are here to show you the time for different countries</p>
+            <a class="btn" href="#" role="button">Browse Times</a>
+        </div>
+    </div>
+    <script>
+        // let a;
+        // let date;
+        // let time;
+        // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        // setInterval(() => {
+        //     a = new Date();
+        //     date = a.toLocaleDateString(undefined, options);
+        //     time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+        //     document.getElementById("time").innerHTML = 'Current Time is(India) : ' + time + '<br> on ' + date;
+        // }, 1000);
+
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML ='Current Time is : ' + time + '<br>on ' + date;
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
